@@ -27,8 +27,6 @@ def create_grid():
     # go through matrix, input values
     for i in range(size):
         for j in range(size):
-            # current x/y coordinate
-            c = matrix[i][j]
             # calc potentials at point
             p1 = calc_potential(q1, calc_radius(i, j, q1_x, q_y))
             p2 = calc_potential(q2, calc_radius(i, j, q2_x, q_y))

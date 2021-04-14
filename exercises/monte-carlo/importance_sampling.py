@@ -7,6 +7,8 @@ from IPython.display import clear_output
 PI = 3.1415926
 e = 2.71828
 
+# predominantly followed this example:
+# https://towardsdatascience.com/monte-carlo-simulations-with-python-part-1-f5627b7d60b0
 def get_rand_number(min_value, max_value):
     range = max_value - min_value
     choice = random.uniform(0, 1)
@@ -15,7 +17,7 @@ def get_rand_number(min_value, max_value):
 
 def f_of_x(x):
     if x == 0:
-      return 0
+        return 0
     return ((x ** (-0.5)) / ((e ** x) + 1))
 
 

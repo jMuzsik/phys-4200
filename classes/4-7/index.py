@@ -9,5 +9,3 @@ def v_in(t):
         return 1
     else:
         return -1
-
-

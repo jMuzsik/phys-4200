@@ -53,13 +53,6 @@ dt = .01
 
 x, t = RungeKutta4(f, x0, t0, tf, dt)
 
-print('hi')
-print(x)
-print('hi')
-print(x[0, :])
-print('hi')
-print(x, x[1, :])
-
 # plt.plot(t, x[0])
 # plt.show()
 

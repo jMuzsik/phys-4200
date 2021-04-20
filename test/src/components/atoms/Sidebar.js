@@ -1,3 +1,3 @@
 export default function Sidebar() {
-  return <aside className="side">Sidebar content</aside>;
+  return <aside className="sidebar">Sidebar content</aside>;
 }

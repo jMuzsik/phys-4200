@@ -1,8 +1,23 @@
 import { useRoute } from "wouter";
-import { Transition } from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 
-export default AnimatedRoute = ({ children, location }) => {
-  const correctLocation = useRoute(location)[0];
+const duration = 300;
 
-  return <Transition in={correctLocation}>{children}</Transition>;
+export default ({ location }) => {
+  const [match] = useRoute(location);
+
+  return (
+    <div className="transition-container">
+      <CSSTransition
+        in={match != null}
+        timeout={duration}
+        classNames="page"
+        unmountOnExit
+      >
+        <div className="page">
+          <h1>I'm a fade Transition!</h1>
+        </div>
+      </CSSTransition>
+    </div>
+  );
 };

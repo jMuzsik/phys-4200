@@ -13,7 +13,7 @@ import LinkButton from "../atoms/LinkButton";
 export default function Nav() {
   const setLocation = useLocation()[1];
   return (
-    <Navbar>
+    <Navbar className="nav">
       <NavbarGroup align={Alignment.RIGHT}>
         <NavbarHeading>Physics</NavbarHeading>
         <NavbarDivider />

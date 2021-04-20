@@ -9,7 +9,7 @@ export default function Layout({ children }) {
   return (
     <Wrapper>
       <Header />
-      <Nav class="main-nav" />
+      <Nav />
       <Sidebar />
       {children}
       <Ad>Advertising</Ad>

@@ -1,23 +1,19 @@
-import { useRoute } from "wouter";
+import { useLocation } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 
 const duration = 300;
 
-export default ({ location }) => {
-  const [match] = useRoute(location);
-
+export default ({ match, children }) => {
+  console.log(match)
+  console.log(children)
   return (
-    <div className="transition-container">
-      <CSSTransition
-        in={match != null}
-        timeout={duration}
-        classNames="page"
-        unmountOnExit
-      >
-        <div className="page">
-          <h1>I'm a fade Transition!</h1>
-        </div>
-      </CSSTransition>
-    </div>
+    <CSSTransition
+      in={match !== null}
+      timeout={duration}
+      classNames="page"
+      unmountOnExit
+    >
+      {children}
+    </CSSTransition>
   );
 };

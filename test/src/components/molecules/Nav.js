@@ -6,29 +6,18 @@ import {
   NavbarHeading,
 } from "@blueprintjs/core";
 
-import { useLocation } from "wouter";
+import { useLocation } from "react-router-dom";
 
 import LinkButton from "../atoms/LinkButton";
 
 export default function Nav() {
-  const setLocation = useLocation()[1];
   return (
     <Navbar className="nav">
       <NavbarGroup align={Alignment.RIGHT}>
         <NavbarHeading>Physics</NavbarHeading>
         <NavbarDivider />
-        <LinkButton
-          href="/"
-          onClick={() => setLocation("/")}
-          text="Home"
-          className="minimal"
-        />
-        <LinkButton
-          href="/about"
-          onClick={() => setLocation("/about")}
-          text="About"
-          className="minimal"
-        />
+        <LinkButton href="/" text="Home" className="minimal" />
+        <LinkButton href="/about" text="About" className="minimal" />
       </NavbarGroup>
     </Navbar>
   );

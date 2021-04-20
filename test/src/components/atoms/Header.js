@@ -1,5 +1,5 @@
 import { H1 } from "@blueprintjs/core";
-import { useLocation } from "wouter";
+import { useLocation } from "react-router-dom";
 
 export default function Header({ children }) {
   const location = useLocation()[0];

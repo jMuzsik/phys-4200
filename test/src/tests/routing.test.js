@@ -1,7 +1,7 @@
 // app.test.js
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { Switch } from "wouter";
+import { Switch } from "react-router-dom";
 
 import "@testing-library/jest-dom/extend-expect";
 

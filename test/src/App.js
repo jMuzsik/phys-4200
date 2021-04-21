@@ -4,25 +4,27 @@ import {
   Switch,
   useLocation,
 } from "react-router-dom";
-import { H1, H3 } from "@blueprintjs/core";
+import { H1 } from "@blueprintjs/core";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
 
 import Layout from "components/Layout";
 import Main from "components/molecules/Main";
+
+import Histogram from "components/unique/Histogram";
 
 import "styles/Layout.css";
 import "styles/transitions.css";
 
 function Inner() {
   const location = useLocation();
-  console.log(location.pathname);
-  console.log(location.state.from);
   return (
     <SwitchTransition>
       <CSSTransition timeout={300} classNames="fade" key={location.key}>
         <Switch location={location}>
           <Route exact path="/">
-            <Main />
+            <Main>
+              <Histogram />
+            </Main>
           </Route>
           <Route exact path="/about">
             <H1>this is the about page</H1>
@@ -37,7 +39,6 @@ function Inner() {
 }
 
 function App() {
-  console.log("what");
   return (
     <Router>
       <Layout>

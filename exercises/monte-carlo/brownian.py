@@ -1,9 +1,9 @@
 import numpy as np
-import matplotlib.animation as animation
-import matplotlib.pyplot as plt
 import matplotlib
-import random
 matplotlib.use('TKAgg')
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+import random
 
 fig = plt.figure(figsize=(5, 5))
 ax = plt.axes(xlim=(-100, 100), ylim=(-100, 100))
@@ -25,15 +25,16 @@ def init():
     ax.add_patch(point3)
     return point1, point2, point3,
 
+
 def helper(val, movement, pos_or_neg):
-  if val == 0:
-    return movement * pos_or_neg
-  else:
-    if pos_or_neg == 1:
-      return val + movement
+    if val == 0:
+        return movement * pos_or_neg
     else:
-      return val - movement
-      
+        if pos_or_neg == 1:
+            return val + movement
+        else:
+            return val - movement
+
 
 def update(tup, movement):
     direction = random.randint(0, 3)
@@ -73,5 +74,5 @@ def animate(i):
 
 anim = animation.FuncAnimation(fig, animate,
                                init_func=init, frames=1000, interval=20, blit=True)
-writergif = animation.PillowWriter(fps=5)
+writergif = animation.ImageMagickFileWriter()
 anim.save('filename.gif', writer=writergif)

@@ -10,10 +10,11 @@ import { SwitchTransition, CSSTransition } from "react-transition-group";
 import Layout from "components/Layout";
 import Main from "components/molecules/Main";
 
-import Histogram from "components/unique/Histogram";
+import HistogramWrapper from "pages/potential";
 
 import "styles/Layout.css";
 import "styles/transitions.css";
+import "styles/forms.css";
 
 function Inner() {
   const location = useLocation();
@@ -23,7 +24,7 @@ function Inner() {
         <Switch location={location}>
           <Route exact path="/">
             <Main>
-              <Histogram />
+              <HistogramWrapper />
             </Main>
           </Route>
           <Route exact path="/about">

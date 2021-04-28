@@ -8,12 +8,12 @@ import Footer from "./atoms/Footer";
 export default function Layout({ children }) {
   return (
     <Wrapper>
-      <Header />
+      {/* <Header />
       <Nav />
-      <Sidebar />
+      <Sidebar /> */}
       {children}
-      <Ad>Advertising</Ad>
-      <Footer />
+      {/* <Ad>Advertising</Ad>
+      <Footer /> */}
     </Wrapper>
   );
 }

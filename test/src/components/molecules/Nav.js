@@ -6,7 +6,6 @@ import {
   NavbarHeading,
 } from "@blueprintjs/core";
 
-import { useLocation } from "react-router-dom";
 
 import LinkButton from "../atoms/LinkButton";
 

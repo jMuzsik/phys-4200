@@ -38,12 +38,12 @@ def create_grid():
 grid = create_grid()
 
 # potentials
-plt.matshow(grid)
-plt.colorbar()
-plt.show()
+# plt.matshow(grid)
+# plt.colorbar()
+# plt.show()
 
-# electric field
-grad_x, grad_y = np.gradient(grid)
-E = np.sqrt(grad_x ** 2 + grad_y ** 2)
-plt.quiver(-grad_y[::4, ::4], grad_x[::4, ::4])
-plt.show()
+# # electric field
+# grad_x, grad_y = np.gradient(grid)
+# E = np.sqrt(grad_x ** 2 + grad_y ** 2)
+# plt.quiver(-grad_y[::4, ::4], grad_x[::4, ::4])
+# plt.show()

@@ -1,0 +1,9 @@
+.charge-form form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.charge-form h2 {
+  text-align: center;
+}

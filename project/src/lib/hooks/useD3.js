@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import * as d3 from "d3";
 
-export default (renderChartFn, dependencies) => {
+export default function useD3(renderChartFn, dependencies) {
   const ref = useRef();
 
   useEffect(() => {
@@ -11,4 +11,4 @@ export default (renderChartFn, dependencies) => {
   }, dependencies);
 
   return ref;
-};
+}

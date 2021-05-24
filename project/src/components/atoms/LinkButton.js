@@ -1,7 +1,7 @@
 import { Button, Classes } from "@blueprintjs/core";
 import { Link } from "react-router-dom";
 
-export default ({ href, className, text, icon }) => {
+function LinkButton({ href, className, text, icon }) {
   return (
     <Link
       to={(location) => ({
@@ -17,4 +17,6 @@ export default ({ href, className, text, icon }) => {
       </div>
     </Link>
   );
-};
+}
+
+export default LinkButton;

@@ -4,14 +4,15 @@ import {
   Switch,
   useLocation,
 } from "react-router-dom";
-import { H1 } from "@blueprintjs/core";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
 
 import Layout from "components/Layout";
 import Main from "components/molecules/Main";
 
-import HistogramWrapper from "pages/potential";
+import Potential from "pages/potential";
+import Brownian from "pages/brownian";
 
+import "./index.css";
 import "styles/Layout.css";
 import "styles/transitions.css";
 import "styles/forms.css";
@@ -23,15 +24,24 @@ function Inner() {
       <CSSTransition timeout={300} classNames="fade" key={location.key}>
         <Switch location={location}>
           <Route exact path="/">
-            <Main>
-              <HistogramWrapper />
+            <Main title="Potential">
+              <Potential />
             </Main>
           </Route>
           <Route exact path="/about">
-            <H1>this is the about page</H1>
+            <Main title="About">
+              <h3>Not much to see here</h3>
+            </Main>
+          </Route>
+          <Route exact path="/brownian">
+            <Main title="Brownian">
+              <Brownian />
+            </Main>
           </Route>
           <Route path="*">
-            <H1>404</H1>
+            <Main title="About">
+              <h3>404</h3>
+            </Main>
           </Route>
         </Switch>
       </CSSTransition>

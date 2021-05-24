@@ -1,6 +1,6 @@
 import * as d3 from "d3";
 
-export default (svg, data, dots) => {
+export default function d3Code(svg, data, dots) {
   let margin = 15,
     height = 400 - 3 * margin,
     width = 400 - 3 * margin;
@@ -13,10 +13,7 @@ export default (svg, data, dots) => {
 
   // Add Y axis
   var y = d3.scaleLinear().domain([0, 100]).range([height, 0]);
-  svg
-    .append("g")
-    .attr("transform", `translate(0, 0)`)
-    .call(d3.axisLeft(y));
+  svg.append("g").attr("transform", `translate(0, 0)`).call(d3.axisLeft(y));
 
   // compute the density data
   var densityData = d3
@@ -84,4 +81,4 @@ export default (svg, data, dots) => {
       div.transition().duration("200").style("opacity", 0);
     });
   // .style("fill", function (d) { return color() } )
-};
+}

@@ -1,5 +1,3 @@
-import { zeros } from "./utils";
-
 const EPSILON_0 = 8.854187817e-12;
 
 function calcRadius(x1, y1, x2, y2) {

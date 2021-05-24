@@ -11,3 +11,15 @@
 7. Then I can create points related to a certain ratio
 8. Let us say there are 10000 data points available - then I would add an array as so: [x, y] to the exact point if say the point has 1/10000 of the total it gets one point, etc.
 
+# Brownian motion
+
+Should i do it different than the ready-made solution?
+
+Benefits is that it is completely finished, negative is more work.
+
+How would i approach it if i built it separately?
+
+- Add particle, and then it moves on it's own
+  - But this doesn't really exemplify brownian motion
+
+So, i may as well keep what i have now and have a means to update the variables.

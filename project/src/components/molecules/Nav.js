@@ -3,9 +3,7 @@ import {
   Navbar,
   NavbarDivider,
   NavbarGroup,
-  NavbarHeading,
 } from "@blueprintjs/core";
-
 
 import LinkButton from "../atoms/LinkButton";
 
@@ -13,9 +11,10 @@ export default function Nav() {
   return (
     <Navbar className="nav">
       <NavbarGroup align={Alignment.RIGHT}>
-        <NavbarHeading>Physics</NavbarHeading>
+        <LinkButton href="/" text="Potential" className="minimal" />
         <NavbarDivider />
-        <LinkButton href="/" text="Home" className="minimal" />
+        <LinkButton href="/brownian" text="Brownian" className="minimal" />
+        <NavbarDivider />
         <LinkButton href="/about" text="About" className="minimal" />
       </NavbarGroup>
     </Navbar>
